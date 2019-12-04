@@ -4,10 +4,7 @@ import MenuButton from './Button'
 import Header from './Header'
 import { connect } from 'react-redux'
 import { changeUserName } from './redux/actions/userActions';
-
-
-
-
+import SelectEmotions from './views/SelectEmotions'
 
 class App extends Component {
 
@@ -29,16 +26,7 @@ class App extends Component {
     let { data1 } = this.state
     const { userName } = this.props
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <Header text={userName} />
-          <MenuButton data1={data1} handleClick={this.handleClick}></MenuButton>
-        </header>
-      </div >
+      <SelectEmotions/>
     )
   }
 }
