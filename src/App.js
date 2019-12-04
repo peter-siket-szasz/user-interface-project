@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import MenuButton from './Button'
-import Header from './Header'
-import Button from '@material-ui/core/Button'
+import FeelButton from './FeelButton';
+import NavButton from './NavButton';
 import { connect } from 'react-redux'
 import { changeUserName } from './redux/actions/userActions';
 import { faThumbsDown, faThumbsUp, faCog, faChartBar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 
 
@@ -34,21 +30,15 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Button variant="contained" className="App-nav-button">
-            <span className="App-nav-button-text">My Data</span>
-            <FontAwesomeIcon icon={faChartBar} />
-          </Button>
+          <NavButton text="My data" icon={faChartBar} handleClick={this.handleClick}></NavButton>
           <h1 className="App-title">Emotion tracking</h1>
-          <Button variant="contained" className="App-nav-button">
-            <span className="App-nav-button-text">Settings</span>
-            <FontAwesomeIcon icon={faCog} />
-          </Button>
+          <NavButton text="Settings" icon={faCog} handleClick={this.handleClick}></NavButton>
         </header>
         <main className="App-body">
           <div className="App-body-title">How you feeling?</div>
           <div className="App-feel-button-container">
-            <Button variant="contained" className="App-feel-button"><FontAwesomeIcon icon={faThumbsDown} color="red" size="3x"/></Button>
-            <Button variant="contained" className="App-feel-button"><FontAwesomeIcon icon={faThumbsUp} color="green" size="3x"/></Button>
+            <FeelButton icon={faThumbsDown} color="red" handleClick={this.handleClick}></FeelButton>
+            <FeelButton icon={faThumbsUp} color="green" handleClick={this.handleClick}></FeelButton>
           </div>
         </main>
       </div >
