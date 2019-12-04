@@ -18,10 +18,8 @@ class App extends Component {
     }
   }
 
-  handleClick = () => {
-    const users = ["TESTER", "TEST USER", "TIK ALPHA"]
-    const randUser = users[Math.floor(Math.random() * users.length)];
-    this.props.changeUserName(randUser)
+  handleClick = (string) => {
+    this.props.changeUserName(string)
   }
 
   render() {
@@ -40,6 +38,7 @@ class App extends Component {
             <FeelButton icon={faThumbsDown} color="red" handleClick={this.handleClick}></FeelButton>
             <FeelButton icon={faThumbsUp} color="green" handleClick={this.handleClick}></FeelButton>
           </div>
+          <div>{userName}</div>
         </main>
       </div >
     )

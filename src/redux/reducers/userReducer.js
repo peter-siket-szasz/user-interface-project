@@ -1,7 +1,7 @@
 import * as types from "../actionTypes/userActionTypes"
 
 const initialState = {
-    userName: "Test User"
+    userName: "Click a button"
 }
 
 export default (state = initialState, action) => {

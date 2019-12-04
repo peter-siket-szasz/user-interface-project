@@ -1,17 +1,21 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
+import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
 
-const FeelButton = ({icon, color, handleClick}) => {
+export default class NavButton extends Component {
+    feelClick = () => {
+        this.props.handleClick("Clicked " + this.props.icon.iconName);
+    }
 
-    return (
-        <Button variant="contained" className="Feel-button" onClick={handleClick}>
+    render() {
+        const {color, icon} = this.props
+        return (
+        <Button variant="contained" className="Feel-button" onClick={this.feelClick}>
             <FontAwesomeIcon icon={icon} color={color} size="3x"/>
         </Button>
-    )
+        )
+    }
 }
-
-export default FeelButton
