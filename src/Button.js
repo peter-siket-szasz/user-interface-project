@@ -11,11 +11,8 @@ export default class MenuButton extends Component {
         }
     }
 
-
     // handleClick = () => this.setState({ count: this.state.count + 1 })
     handleClick = () => this.props.handleClick()
-
-
 
     render() {
         const { data1, data17 } = this.props

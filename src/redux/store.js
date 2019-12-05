@@ -4,7 +4,6 @@ import rootReducer from './reducers/rootReducer'
 // Initial state for the application
 const initialState = {}
 
-
 // Creating store: rootReducer combines all reducers, 
 // initialState defines initial state for the application
 const store = createStore(

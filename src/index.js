@@ -6,12 +6,14 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/store';
+import SelectEmotions from './views/SelectEmotions';
 
 const routing = (
     <Provider store={store}>
         <Router>
             <Switch>
-                <Route exact path='/' component={App}/>
+                <Route exact path='/' component={App} />
+                <Route path='/selectemotions' component={SelectEmotions} />
             </Switch>
         </Router>
     </Provider>
