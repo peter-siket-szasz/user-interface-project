@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import MenuButton from './Button'
-import Header from './Header'
+import FeelButton from './FeelButton';
+import NavButton from './NavButton';
 import { connect } from 'react-redux'
 import { changeUserName } from './redux/actions/userActions';
-
+import { faThumbsDown, faThumbsUp, faCog, faChartBar } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -19,10 +18,8 @@ class App extends Component {
     }
   }
 
-  handleClick = () => {
-    const users = ["TESTER", "TEST USER", "TIK ALPHA"]
-    const randUser = users[Math.floor(Math.random() * users.length)];
-    this.props.changeUserName(randUser)
+  handleClick = (string) => {
+    this.props.changeUserName(string)
   }
 
   render() {
@@ -31,13 +28,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <Header text={userName} />
-          <MenuButton data1={data1} handleClick={this.handleClick}></MenuButton>
+          <NavButton text="My data" icon={faChartBar} handleClick={this.handleClick}></NavButton>
+          <h1 className="App-title">Emotion tracking</h1>
+          <NavButton text="Settings" icon={faCog} handleClick={this.handleClick}></NavButton>
         </header>
+        <main className="App-body">
+          <div className="App-body-title">How you feeling?</div>
+          <div className="App-feel-button-container">
+            <FeelButton icon={faThumbsDown} color="red" handleClick={this.handleClick}></FeelButton>
+            <FeelButton icon={faThumbsUp} color="green" handleClick={this.handleClick}></FeelButton>
+          </div>
+          <div>{userName}</div>
+        </main>
       </div >
     )
   }
