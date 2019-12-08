@@ -39,6 +39,9 @@ class App extends Component {
                     <Route exact path='/submitemotions' component={SubmitEmotions} />
                     <Route exact path='/' component={StartMenu} />
                 </main>
+                <footer>
+
+                </footer>
             </div >
         )
     }
