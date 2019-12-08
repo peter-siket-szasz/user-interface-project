@@ -7,14 +7,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/store';
 import SelectEmotions from './views/SelectEmotions';
+import SubmitEmotions from './views/SubmitEmotions';
 
 const routing = (
     <Provider store={store}>
         <Router>
-            <Switch>
-                <Route exact path='/' component={App} />
-                <Route path='/selectemotions' component={SelectEmotions} />
-            </Switch>
+            <Route path='/' component={App} />
         </Router>
     </Provider>
 )

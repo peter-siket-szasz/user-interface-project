@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import FeelButton from './FeelButton';
-import NavButton from './NavButton';
 import { connect } from 'react-redux'
 import { changeUserName } from './redux/actions/userActions';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { faThumbsDown, faThumbsUp, faCog, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import FeelButton from './FeelButton';
+import NavButton from './NavButton';
+import StartMenu from './views/StartMenu';
+import SelectEmotions from './views/SelectEmotions';
+import SubmitEmotions from './views/SubmitEmotions';
 
 class App extends Component {
     constructor(props) {
@@ -15,7 +19,9 @@ class App extends Component {
     }
 
     handleClick = (string) => {
-        this.props.changeUserName(string)
+        console.log("TESTISSÄ");
+
+        // this.props.changeUserName(string)
     }
 
     render() {
@@ -29,12 +35,9 @@ class App extends Component {
                     <NavButton text="Settings" icon={faCog} handleClick={this.handleClick}></NavButton>
                 </header>
                 <main className="App-body">
-                    <div className="App-body-title">How you feeling?</div>
-                    <div className="App-feel-button-container">
-                        <FeelButton icon={faThumbsDown} color="red" handleClick={this.handleClick}></FeelButton>
-                        <FeelButton icon={faThumbsUp} color="green" handleClick={this.handleClick}></FeelButton>
-                    </div>
-                    <div>{userName}</div>
+                    <Route exact path='/selectemotions' component={SelectEmotions} />
+                    <Route exact path='/submitemotions' component={SubmitEmotions} />
+                    <Route exact path='/' component={StartMenu} />
                 </main>
             </div >
         )
