@@ -5,3 +5,15 @@
   margin: auto;
   width: 1000px;
 }
+
+.select-emotions-container {
+  display: flex;
+  flex-flow: row;
+  height: 500px;
+}
+
+.select-emotions-column {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+}

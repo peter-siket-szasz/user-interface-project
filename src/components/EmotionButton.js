@@ -1,16 +1,19 @@
 import React from 'react';
+import { Chip } from '@material-ui/core';
+import { colors } from '../helpers/constants';
 
 const EmotionButton = props => {
+    let background = colors[props.kind + "_" + props.sentiment];
     return (
-        <div style={{
-            padding: 15,
-            width: 100,
-            height: 20,
-            borderRadius: 20 + 30,
-            background: "green"
-        }}>
-            {props.children}
-        </div>
+        <Chip 
+            label={props.children} 
+            onClick={() => console.log(props.children)} 
+            style={{
+                width: 225,
+                margin: "2.5px 12.5px",
+                fontSize: "1.1em",
+                background: background
+        }}/>
     )
 }
 

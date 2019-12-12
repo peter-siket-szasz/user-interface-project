@@ -1,4 +1,24 @@
 
+export const colors = {
+    object_positive: "#F1B6DA",
+    object_negative: "#D01C8B",
+
+    future_positive: "#B8E186",
+    future_negative: "#4DAC26",
+
+    event_positive: "#FDB863",
+    event_negative: "#E66101",
+
+    self_positive: "#80CDC1",
+    self_negative: "#018571",
+
+    social_positive: "#92C5DE",
+    social_negative: "#0571B0",
+
+    cathected_positive: "#BABABA",
+    cathected_negative: "#404040",
+}
+
 export const emotions = [
     // Related to object properties, Purple
     { name: "interest",     sentiment: "positive", kind: "object" },
@@ -10,12 +30,9 @@ export const emotions = [
     { name: "surprise",     sentiment: "positive", kind: "object" },
     { name: "amusement",    sentiment: "positive", kind: "object" },
     { name: "indifference", sentiment: "negative", kind: "object" },
-    { name: "habituation",  sentiment: "negative", kind: "object" },
     { name: "boredom",      sentiment: "negative", kind: "object" },
-    { name: "aversion",     sentiment: "negative", kind: "object" },
     { name: "disgust",      sentiment: "negative", kind: "object" },
     { name: "revulstion",   sentiment: "negative", kind: "object" },
-    { name: "alarm",        sentiment: "negative", kind: "object" },
     { name: "panic",        sentiment: "negative", kind: "object" },
     
     // Future appraisal, Green
@@ -29,7 +46,7 @@ export const emotions = [
     { name: "gratitude",    sentiment: "positive", kind: "event" },
     { name: "thankfulness", sentiment: "positive", kind: "event" },
     { name: "joy",          sentiment: "positive", kind: "event" },
-    { name: "elation",      sentiment: "positive", kind: "event" },
+    { name: "love",         sentiment: "positive", kind: "event" },
     { name: "triumph",      sentiment: "positive", kind: "event" },
     { name: "jubilation",   sentiment: "positive", kind: "event" },
     { name: "patience",     sentiment: "positive", kind: "event" },
@@ -40,10 +57,9 @@ export const emotions = [
     { name: "grief",        sentiment: "negative", kind: "event" },
     { name: "frustration",  sentiment: "negative", kind: "event" },
     { name: "restlessness", sentiment: "negative", kind: "event" },
-    { name: "discontentment", sentiment: "negative", kind: "event" },
     { name: "disappointment", sentiment: "negative", kind: "event" },
 
-    // Self-appraisal, 
+    // Self-appraisal, Teal
     { name: "humility",     sentiment: "positive", kind: "self" },
     { name: "modesty",      sentiment: "positive", kind: "self" },
     { name: "pride",        sentiment: "negative", kind: "self" },
@@ -58,8 +74,4 @@ export const emotions = [
     { name: "envy",         sentiment: "negative", kind: "social" },
     { name: "jealousy",     sentiment: "negative", kind: "social" },
     { name: "cruelty",      sentiment: "negative", kind: "social" },
-
-    // Cathected Black/White :D
-    { name: "love",         sentiment: "positive", kind: "cathected" },
-    { name: "hate",         sentiment: "negative", kind: "cathected" },
 ]
