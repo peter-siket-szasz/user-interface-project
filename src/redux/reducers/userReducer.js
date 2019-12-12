@@ -1,7 +1,8 @@
 import * as types from "../actionTypes/userActionTypes"
 
 const initialState = {
-    userName: "Click a button"
+    userName: "Click a button",
+    submitted: false
 }
 
 export default (state = initialState, action) => {
@@ -11,6 +12,12 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 userName: action.name
+            }
+
+        case types.SUBMIT:
+            return {
+                ...state,
+                submitted: action.bool
             }
 
         default:
