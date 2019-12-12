@@ -30,12 +30,9 @@ export const emotions = [
     { name: "surprise",     sentiment: "positive", kind: "object" },
     { name: "amusement",    sentiment: "positive", kind: "object" },
     { name: "indifference", sentiment: "negative", kind: "object" },
-    { name: "habituation",  sentiment: "negative", kind: "object" },
     { name: "boredom",      sentiment: "negative", kind: "object" },
-    { name: "aversion",     sentiment: "negative", kind: "object" },
     { name: "disgust",      sentiment: "negative", kind: "object" },
     { name: "revulstion",   sentiment: "negative", kind: "object" },
-    { name: "alarm",        sentiment: "negative", kind: "object" },
     { name: "panic",        sentiment: "negative", kind: "object" },
     
     // Future appraisal, Green
@@ -49,7 +46,7 @@ export const emotions = [
     { name: "gratitude",    sentiment: "positive", kind: "event" },
     { name: "thankfulness", sentiment: "positive", kind: "event" },
     { name: "joy",          sentiment: "positive", kind: "event" },
-    { name: "elation",      sentiment: "positive", kind: "event" },
+    { name: "love",         sentiment: "positive", kind: "event" },
     { name: "triumph",      sentiment: "positive", kind: "event" },
     { name: "jubilation",   sentiment: "positive", kind: "event" },
     { name: "patience",     sentiment: "positive", kind: "event" },
@@ -60,7 +57,6 @@ export const emotions = [
     { name: "grief",        sentiment: "negative", kind: "event" },
     { name: "frustration",  sentiment: "negative", kind: "event" },
     { name: "restlessness", sentiment: "negative", kind: "event" },
-    { name: "discontentment", sentiment: "negative", kind: "event" },
     { name: "disappointment", sentiment: "negative", kind: "event" },
 
     // Self-appraisal, Teal
@@ -78,8 +74,4 @@ export const emotions = [
     { name: "envy",         sentiment: "negative", kind: "social" },
     { name: "jealousy",     sentiment: "negative", kind: "social" },
     { name: "cruelty",      sentiment: "negative", kind: "social" },
-
-    // Cathected Black/White :D
-    { name: "love",         sentiment: "positive", kind: "cathected" },
-    { name: "hate",         sentiment: "negative", kind: "cathected" },
 ]

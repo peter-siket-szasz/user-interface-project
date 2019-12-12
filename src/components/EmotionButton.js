@@ -9,8 +9,9 @@ const EmotionButton = props => {
             label={props.children} 
             onClick={() => console.log(props.children)} 
             style={{
-                width: 250,
-                fontSize: "1.2em",
+                width: 225,
+                margin: "2.5px 12.5px",
+                fontSize: "1.1em",
                 background: background
         }}/>
     )
