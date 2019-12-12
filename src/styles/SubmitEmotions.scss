@@ -1,0 +1,39 @@
+
+
+.divider {
+    margin: 1em 0em !important;
+}
+
+.save-button {
+    display: flex;
+    margin: 1em;
+}
+
+.save-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-emotions-container {
+    margin: 1em;
+}
+
+.chip-wrapper {
+    margin: 2em;
+    display: flex;
+    justify-content: space-around
+    
+}
+
+.chip-container {
+    margin: 2em 15em;
+}
+.MuiChip-root {
+    width: 200px;
+    font-size: 1.2em !important;
+   
+}
+
+.MuiChip-colorPrimary {
+    // background-color: aquamarine !important;
+}

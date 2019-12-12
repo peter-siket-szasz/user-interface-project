@@ -2,6 +2,20 @@
 @import "styles/FeelButton.scss";
 @import "styles/NavButton.scss";
 @import "styles/SelectEmotions.scss";
+@import "styles/SubmitEmotions.scss";
+
+html {
+  background-color: #FBB03B;
+}
+
+footer {
+  background-image: url("./bottom.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 15em;
+  position: absolute;
+  bottom: 0;
+}
 
 body {
   margin: 0;
