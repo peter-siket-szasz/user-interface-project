@@ -1,4 +1,24 @@
 
+export const colors = {
+    object_positive: "#F1B6DA",
+    object_negative: "#D01C8B",
+
+    future_positive: "#B8E186",
+    future_negative: "#4DAC26",
+
+    event_positive: "#FDB863",
+    event_negative: "#E66101",
+
+    self_positive: "#80CDC1",
+    self_negative: "#018571",
+
+    social_positive: "#92C5DE",
+    social_negative: "#0571B0",
+
+    cathected_positive: "#BABABA",
+    cathected_negative: "#404040",
+}
+
 export const emotions = [
     // Related to object properties, Purple
     { name: "interest",     sentiment: "positive", kind: "object" },
@@ -43,7 +63,7 @@ export const emotions = [
     { name: "discontentment", sentiment: "negative", kind: "event" },
     { name: "disappointment", sentiment: "negative", kind: "event" },
 
-    // Self-appraisal, 
+    // Self-appraisal, Teal
     { name: "humility",     sentiment: "positive", kind: "self" },
     { name: "modesty",      sentiment: "positive", kind: "self" },
     { name: "pride",        sentiment: "negative", kind: "self" },
