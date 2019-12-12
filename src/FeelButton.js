@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class NavButton extends Component {
     feelClick = () => {
-        this.props.handleClick("Clicked " + this.props.icon.iconName);
+        this.props.handleClick(true);
     }
 
     render() {
