@@ -48,7 +48,7 @@ class StartMenu extends Component {
                 </div>
                 <div className={"App-submit-text-container " + (this.props.submitted ? '' : 'hidden')}>
                     <div className="App-submit-text">Submission received</div>
-                    <Button variant="contained" onClick={this.unsubmit}>Undo submit</Button>
+                    <Button variant="text" onClick={this.unsubmit}>Undo submit</Button>
                 </div>
             </div>
         )
