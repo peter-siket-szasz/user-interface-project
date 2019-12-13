@@ -3,11 +3,14 @@ import { Chip } from '@material-ui/core';
 import { colors } from '../helpers/constants';
 
 const EmotionButton = props => {
-    let background = colors[props.kind + "_" + props.sentiment];
+    let background = colors[props.emotion.kind + "_" + props.emotion.sentiment];
+    const onClick = () => {
+        props.onClick(props.emotion)
+    }
     return (
         <Chip 
-            label={props.children} 
-            onClick={() => console.log(props.children)} 
+            label={props.emotion.name} 
+            onClick={onClick} 
             style={{
                 width: 225,
                 margin: "2.5px 12.5px",
