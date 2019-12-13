@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { changeUserName } from './redux/actions/userActions';
+import { changeText } from './redux/actions/userActions';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { faThumbsDown, faThumbsUp, faCog, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import FeelButton from './FeelButton';
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeUserName: (name) => dispatch(changeUserName(name))
+        // changeUserName: (name) => dispatch(changeText(name))
 
     }
 }
