@@ -7,9 +7,6 @@ const EmotionButton = props => {
     const onClick = () => {
         props.onClick(props.emotion)
     }
-
-
-
     return (
         <Chip
             label={props.emotion.name}

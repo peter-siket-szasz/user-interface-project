@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import EmotionButton from '../components/EmotionButton';
+import AddEmotion from '../components/AddEmotion';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
@@ -11,11 +12,31 @@ import { toggleEmotion } from '../redux/actions/emotionsActions';
 
 
 class SelectEmotions extends React.Component {
+    state = {
+        addedEmotions: []
+    }
     onClick = (e) => {
         this.props.toggleEmotion(e);
     }
     selectedEmpty = () => {
         return this.props.selected.length == 0
+    }
+    addEmotion = (name, mount) => {
+        const newEmotion = {name: name, kind: "custom", sentiment: "custom"};
+        this.setState({ addedEmotions: [...this.state.addedEmotions, newEmotion] })
+        if (!mount) {
+            this.props.toggleEmotion(newEmotion);
+        }
+    }
+
+    componentDidMount() {
+        const selected = this.props.selected.map(x => x.name)
+        const names = emotions.map(x => x.name)
+        selected.forEach(x => {
+            if (!names.includes(x)) {
+                this.addEmotion(x, true);
+            }
+        })
     }
 
     render() {
@@ -51,6 +72,17 @@ class SelectEmotions extends React.Component {
                             )
                         })}
                     </div>
+                </div>
+                <AddEmotion onClick={this.onClick} addEmotion={this.addEmotion}/>
+                <div className="select-emotions-row">
+                    {this.state.addedEmotions.map(x => {
+                        const selected = this.props.selected.map(e => e.name).includes(x.name)
+                        return (
+                            <EmotionButton emotion={x} key={x.name} onClick={this.onClick} selected={selected}>
+                                {x.name}
+                            </EmotionButton>
+                        )
+                    })}
                 </div>
             </div>
         )

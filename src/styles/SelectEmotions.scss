@@ -18,6 +18,12 @@
   flex-wrap: wrap;
 }
 
+.select-emotions-row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
 .action-container {
   display: flex;
   justify-content: space-between;
