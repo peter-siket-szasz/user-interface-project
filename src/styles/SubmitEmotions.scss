@@ -26,13 +26,20 @@
 }
 
 .chip-container {
-    margin: 2em 15em;
+    margin: 0em 0em;
+    overflow-y: scroll;
+    height: 45vh;
 }
 .MuiChip-root {
     width: 200px;
     font-size: 1.2em !important;
    
 }
+
+.chip-container {
+
+  }
+  
 
 .MuiChip-colorPrimary {
     // background-color: aquamarine !important;

@@ -1,9 +1,11 @@
 import * as types from "../actionTypes/userActionTypes"
 
-export const changeUserName = (name) => ({
+export const changeText = (name) => ({
     type: types.CHANGE_NAME,
     name
 })
+
+
 
 export const submit = (bool) => ({
     type: types.SUBMIT,
