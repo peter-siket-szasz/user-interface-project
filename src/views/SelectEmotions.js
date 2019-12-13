@@ -6,6 +6,9 @@ import { toggleEmotion } from '../redux/actions/emotionsActions';
 
 
 class SelectEmotions extends React.Component {
+    onClick = (e) => {
+        this.props.toggleEmotion(e);
+    }
     render() {
         return (
             <div className="container">
@@ -14,8 +17,9 @@ class SelectEmotions extends React.Component {
                 <div className="select-emotions-container">
                     <div className="select-emotions-column">
                         {emotions.map(x => { 
+                            const selected = this.props.selected.map(e => e.name).includes(x.name)
                             return (
-                                <EmotionButton emotion={x} key={x.name} onClick={this.props.toggleEmotion}> 
+                                <EmotionButton emotion={x} key={x.name} onClick={this.onClick} selected={selected}> 
                                     {x.name}
                                 </EmotionButton>
                             )

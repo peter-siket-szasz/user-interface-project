@@ -15,7 +15,8 @@ const EmotionButton = props => {
                 width: 225,
                 margin: "2.5px 12.5px",
                 fontSize: "1.1em",
-                background: background
+                background: background,
+                filter: props.selected ? "brightness(50%)" : "brightness(100%)"
         }}/>
     )
 }
