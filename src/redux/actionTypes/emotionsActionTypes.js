@@ -1,0 +1,1 @@
+export const TOGGLE_EMOTION = 'TOGGLE_EMOTION'

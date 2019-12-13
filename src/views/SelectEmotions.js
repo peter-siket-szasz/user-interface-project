@@ -1,8 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import EmotionButton from '../components/EmotionButton';
 import { emotions } from '../helpers/constants';
+import { toggleEmotion } from '../redux/actions/emotionsActions';
+
 
 class SelectEmotions extends React.Component {
+    onClick = (e) => {
+        this.props.toggleEmotion(e);
+    }
     render() {
         return (
             <div className="container">
@@ -11,8 +17,9 @@ class SelectEmotions extends React.Component {
                 <div className="select-emotions-container">
                     <div className="select-emotions-column">
                         {emotions.map(x => { 
+                            const selected = this.props.selected.map(e => e.name).includes(x.name)
                             return (
-                                <EmotionButton sentiment={x.sentiment} kind={x.kind} key={x.name}> 
+                                <EmotionButton emotion={x} key={x.name} onClick={this.onClick} selected={selected}> 
                                     {x.name}
                                 </EmotionButton>
                             )
@@ -24,4 +31,14 @@ class SelectEmotions extends React.Component {
     }
 }
 
-export default SelectEmotions;
+const mapStateToProps = (state) => ({
+    selected: state.emotionsReducer.selected
+})
+
+const mapDispatchToProps = dispatch => {
+    return {
+        toggleEmotion: (emotion) => dispatch(toggleEmotion(emotion))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectEmotions);
