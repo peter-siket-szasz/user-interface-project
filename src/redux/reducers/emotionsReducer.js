@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
             } else {
                 selectedEmotions = [...selectedEmotions, action.emotion]
             }
-            console.log(selectedEmotions)
             return {
                 ...state,
                 selected: selectedEmotions
