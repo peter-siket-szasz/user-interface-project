@@ -84,10 +84,10 @@ class SubmitEmotions extends Component {
                     Select emotions and scale
                 </Typography>
                 <Typography variant="subtitle1">
-                    If you want, you can select whether your feeling is strong or just feeling e.g. slightly happy.
+                    Here you can specify the intensity of your emotions.
                 </Typography>
                 <Typography variant="subtitle1">
-                    If you don't need to specify, you can submit emotions without editing.
+                    If you don't want to specify the intensity, you can just click the 'SAVE CHOICES' button.
                 </Typography>
                 <div className="action-container">
                     <Link to="/selectemotions">

@@ -50,7 +50,7 @@ class SelectEmotions extends React.Component {
                     Select emotions by clicking.
                 </Typography>
                 <Typography variant="subtitle1">
-                    Emotion can be unselected by clicking one again
+                    Emotion can be unselected by clicking them again
                 </Typography>
                 <div className="action-container">
                     <Link to="/">
