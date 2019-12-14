@@ -22,7 +22,7 @@ class SelectEmotions extends React.Component {
         return this.props.selected.length == 0
     }
     addEmotion = (name, mount) => {
-        const newEmotion = {name: name, kind: "custom", sentiment: "custom"};
+        const newEmotion = { name: name, kind: "custom", sentiment: "custom" };
         this.setState({ addedEmotions: [...this.state.addedEmotions, newEmotion] })
         if (!mount) {
             this.props.toggleEmotion(newEmotion);
@@ -47,10 +47,10 @@ class SelectEmotions extends React.Component {
                     Which emotions are you experiencing?
                 </Typography>
                 <Typography variant="subtitle1">
-                    Select emotions by clicking.
+                    Select emotions by clicking. Emotion can be unselected by clicking them again
                 </Typography>
                 <Typography variant="subtitle1">
-                    Emotion can be unselected by clicking them again
+                    If you don't find your emotion, you can add new by clicking "Add emotion"-button
                 </Typography>
                 <div className="action-container">
                     <Link to="/">
@@ -73,7 +73,7 @@ class SelectEmotions extends React.Component {
                         })}
                     </div>
                 </div>
-                <AddEmotion onClick={this.onClick} addEmotion={this.addEmotion}/>
+                <AddEmotion onClick={this.onClick} addEmotion={this.addEmotion} />
                 <div className="select-emotions-row">
                     {this.state.addedEmotions.map(x => {
                         const selected = this.props.selected.map(e => e.name).includes(x.name)
